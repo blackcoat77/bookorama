@@ -13,9 +13,12 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
+  database: bookorama_development
+  host: 127.0.0.1
   username: root
-  password:
+  password: root
   socket: /var/run/mysqld/mysqld.sock
+  port: 3307
 
 development:
   <<: *default
