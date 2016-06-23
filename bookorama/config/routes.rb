@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
 
-
 # add our Default route:
 match ':controller(/:action(/:id))', :via => [:get, :post]
 

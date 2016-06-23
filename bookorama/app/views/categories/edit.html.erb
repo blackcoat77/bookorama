@@ -1,0 +1,18 @@
+<!-- <% @page_title = "Edit Category" %> -->
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+
+
+  <h2>Update Category</h2>
+
+  <%= form_for( :category, :url => {:action => 'update', :id => @category.id}, :html => {:class => ''}) do |f| %>
+
+  <!-- Call partial template _form.html.erb -->
+  <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= submit_tag("Update Category") %>
+    </div>
+
+  <% end %>

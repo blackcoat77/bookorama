@@ -1,0 +1,22 @@
+
+
+
+<table class="table">
+<table class="table table-striped table-responsive">
+  <tr>
+    <th><%= f.label(:category_name, "Category Name") %></th>
+    <td><%= f.text_field(:category_name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:visible) %></th>
+    <td><%= f.check_box(:visible) %></td>
+  </tr>
+  <!-- Below we added new table row to demonstrate datetime_select method of RoR
+        it is not necessary to do that, just for sake of demonstration after adding it here we need to go to the controller and
+        add also params.require to permit created_at -->
+  <tr>
+    <th><%= f.label(:created_at) %></th>
+    <td><%= f.datetime_select(:created_at, :order => [:month, :day, :year]) %></td>
+  </tr>
+</table>
+</table>

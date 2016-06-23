@@ -1,0 +1,32 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+
+  <h2>Book details</h2>
+<div class="table-responsive">
+  <table class="table">
+    <tr>
+      <th>Category name</th>
+      <td><%= @book.category.category_name %></td>
+    </tr>
+    <tr>
+      <th>ISBN</th>
+      <td><%= @book.isbn %></td>
+    </tr>
+    <tr>
+      <th>Author</th>
+      <td><%= @book.author %></td>
+    </tr>
+    <tr>
+      <th>Title: </th>
+      <td><%= @book.title%></td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td><%= @book.price %></td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><%= @book.description %></td>
+    </tr>
+  </table>
+</div>
