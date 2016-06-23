@@ -47,10 +47,14 @@ class CategoriesController < ApplicationController
 
 
   def delete
+    @category = Category.find(params[:id])
   end
 
   def destroy
-    #code
+    category = Category.find(params[:id])
+    category.destroy
+    flash[:notice] = "Category '#{category.category_name}' has been destroyed successfully!"
+    redirect_to(:action => 'index')
   end
 
 
