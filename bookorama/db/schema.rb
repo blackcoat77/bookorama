@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160619023132) do
+ActiveRecord::Schema.define(version: 20160623152238) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "first_name",      limit: 25
@@ -33,15 +33,19 @@ ActiveRecord::Schema.define(version: 20160619023132) do
   add_index "admin_users_books", ["admin_user_id", "book_id"], name: "index_admin_users_books_on_admin_user_id_and_book_id", using: :btree
 
   create_table "books", force: :cascade do |t|
-    t.integer  "category_id", limit: 4
-    t.string   "isbn",        limit: 13,                                          null: false
-    t.string   "author",      limit: 80
-    t.string   "title",       limit: 100
-    t.decimal  "price",                   precision: 5, scale: 2,                 null: false
-    t.boolean  "visible",                                         default: false
-    t.string   "description", limit: 255
-    t.datetime "created_at",                                                      null: false
-    t.datetime "updated_at",                                                      null: false
+    t.integer  "category_id",        limit: 4
+    t.string   "isbn",               limit: 13,                                          null: false
+    t.string   "author",             limit: 80
+    t.string   "title",              limit: 100
+    t.decimal  "price",                          precision: 5, scale: 2,                 null: false
+    t.boolean  "visible",                                                default: false
+    t.string   "description",        limit: 255
+    t.datetime "created_at",                                                             null: false
+    t.datetime "updated_at",                                                             null: false
+    t.string   "photo_file_name",    limit: 255
+    t.string   "photo_content_type", limit: 255
+    t.integer  "photo_file_size",    limit: 4
+    t.datetime "photo_updated_at"
   end
 
   add_index "books", ["category_id"], name: "index_books_on_category_id", using: :btree

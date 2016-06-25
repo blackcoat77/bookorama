@@ -1,28 +1,28 @@
 <h2>Categories</h2>
 <hr>
 <%= link_to("Add New Category", {:action => 'new'}, :class => 'new_element btn glyphicon glyphicon-plus') %>
-<hr />
+<hr/>
 
 <table class="table">
-<table class="table table-striped table-responsive">
-<tr>
-  <th>Category ID</th>
-  <th>Category Name</th>
-  <th>Visible</th>
-  <th>Books</th>
-  <th>CRUD</th>
-</tr>
-  <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.id %></td>
-        <td><%= category.category_name %></td>
-        <td><%= category.visible %></td>
-        <td><%= category.books.size %></td>
-        <td class="actions">
-           <%= link_to("Edit", {:action => 'edit', :id => category.id}, :class => 'btn btn-warning btn-xs') %>
-           <%= link_to("Delete", {:action => 'delete', :id => category.id}, :class => 'btn btn-danger btn-xs') %>
-        </td>
-      </tr>
-  <% end %>
-</table>
+    <table class="table table-striped table-responsive">
+        <tr>
+            <th>Category ID</th>
+            <th>Category Name</th>
+            <th>Visible</th>
+            <th>Books</th>
+            <th>CRUD</th>
+        </tr>
+        <% @categories.each do |category| %>
+        <tr>
+            <td><%= category.id %></td>
+            <td><%= category.category_name %></td>
+            <td><%= category.visible %></td>
+            <td><%= category.books.size %></td>
+            <td class="actions">
+                <%= link_to("Edit", {:action => 'edit', :id => category.id}, :class => 'btn btn-warning btn-xs') %>
+                <%= link_to("Delete", {:action => 'delete', :id => category.id}, :class => 'btn btn-danger btn-xs') %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
 </table>

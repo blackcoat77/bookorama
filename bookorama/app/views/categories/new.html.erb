@@ -1,16 +1,16 @@
 <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
 
 <div class="category new">
-  <h2>Create new category</h2>
+    <h2>Create new category</h2>
 
-  <%= form_for(:category, :url => {:action => 'create'}) do |f| %>
+    <%= form_for(:category, :url => {:action => 'create'}) do |f| %>
 
     <!-- Call partial template _form.html.erb -->
     <%= render(:partial => "form", :locals => {:f => f}) %>
 
     <div class="form-buttons">
-      <%= submit_tag("Create Category") %>
+        <%= submit_tag("Create Category") %>
     </div>
 
-  <% end %>
+    <% end %>
 </div>

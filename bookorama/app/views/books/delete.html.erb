@@ -1,19 +1,18 @@
 <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
 
 <div class="book delete">
-  <h2>Delete a Book</h2>
+    <h2>Delete a Book</h2>
 
-  <%= form_for(:book, :url => {:action => 'destroy', :id => @book.id}) do |f| %>
+    <%= form_for(:book, :url => {:action => 'destroy', :id => @book.id}) do |f| %>
 
-   <p>Are you sure you want to permanently delete this book?</p>
+    <p>Are you sure you want to permanently delete this book?</p>
 
     <p class="reference-name"><%= @book.title %></p>
 
-
     <div class="form-buttons">
-      <%= submit_tag("Delete Book") %>
+        <%= submit_tag("Delete Book") %>
     </div>
 
-  <% end %>
+    <% end %>
 
 </div>

@@ -1,39 +1,41 @@
 <%= error_messages_for(@book) %>
 
 <table summary="book form fields">
-  <tr>
-    <th><%= f.label(:category_id, "Cat Name") %></th>
-      <td><%= f.select(:category_id, @categories.map {|b| [b.category_name, b.id]}) %></td>
-  </tr>
-  <tr>
-    <th><%= f.label(:isbn, "ISBN") %></th>
-    <td><%= f.text_field(:isbn) %></td>
-  </tr>
-  <tr>
-    <th><%= f.label(:author, "Author") %></th>
-    <td><%= f.text_field(:author) %></td>
-  </tr>
-  <tr>
-    <th><%= f.label(:title, "Title") %></th>
-    <td><%= f.text_field(:title) %></td>
-  </tr>
-  <tr>
-    <th><%= f.label(:price, "Price") %></th>
-    <td><%= f.number_field(:price, :step => 0.01) %></td>
-  </tr>
-  <tr>
-    <th><%= f.label(:visible) %></th>
-    <td><%= f.check_box(:visible) %></td>
-  </tr>
-  <tr>
-    <th><%= f.label(:description, "Description") %></th>
-    <td><%= f.text_area(:description, :size => "24x6") %></td>
-  </tr>
-  <!-- Below we added new table row to demonstrate datetime_select method of RoR
-        it is not necessary to do that, just for sake of demonstration after adding it here we need to go to the controller and
-        add also params.require to permit created_at -->
-  <tr>
-    <th><%= f.label(:created_at) %></th>
-    <td><%= f.datetime_select(:created_at, :order => [:month, :day, :year]) %></td>
-  </tr>
+    <tr>
+        <th><%= f.label(:category_id, "Cat Name") %></th>
+        <td><%= f.collection_select :category_id, Category.all, :id, :category_name %></td>
+
+    </tr>
+    <tr>
+        <th><%= f.label(:isbn, "ISBN") %></th>
+        <td><%= f.text_field(:isbn) %></td>
+    </tr>
+    <tr>
+        <th><%= f.label(:author, "Author") %></th>
+        <td><%= f.text_field(:author) %></td>
+    </tr>
+    <tr>
+        <th><%= f.label(:title, "Title") %></th>
+        <td><%= f.text_field(:title) %></td>
+    </tr>
+    <tr>
+        <th><%= f.label(:price, "Price") %></th>
+        <td><%= f.number_field(:price, :step => 0.01) %></td>
+    </tr>
+    <tr>
+        <th><%= f.label(:visible) %></th>
+        <td><%= f.check_box(:visible) %></td>
+    </tr>
+    <tr>
+        <th><%= f.label(:description, "Description") %></th>
+        <td><%= f.text_area(:description, :size => "24x6") %></td>
+    </tr>
+    <tr>
+        <th><%= f.label(:created_at) %></th>
+        <td><%= f.datetime_select(:created_at, :order => [:month, :day, :year]) %></td>
+    </tr>
+    <tr>
+        <th><%= f.label(:photo, "Upload photo") %></th>
+        <th><%= f.file_field(:photo) %></th>
+    </tr>
 </table>

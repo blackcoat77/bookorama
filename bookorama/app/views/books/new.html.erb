@@ -1,18 +1,16 @@
 <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
 
-
-
 <div class="book new">
-  <h2>Create new Book</h2>
+    <h2>Create new Book</h2>
 
-  <%= form_for(:book, :url => {:action => 'create'}) do |f| %>
+    <%= form_for(:book, html: { multipart: true }, :url => {:action => 'create'}) do |f| %>
 
     <!-- Call partial template _form.html.erb -->
     <%= render(:partial => "form", :locals => {:f => f}) %>
 
     <div class="form-buttons">
-      <%= submit_tag("Create Book") %>
+        <%= submit_tag("Create Book") %>
     </div>
 
-  <% end %>
+    <% end %>
 </div>
