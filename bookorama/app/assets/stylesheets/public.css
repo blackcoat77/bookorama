@@ -1,0 +1,43 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding-bottom: 100px
+}
+
+/*********************** Twitter nav bar ***************************************/
+
+.navbar.navbar-default.navbar-static-top {
+    background-color: black;
+}
+.nav.navbar-nav> li> a {
+    color: #2A82D2;
+}
+.navbar-default .navbar-brand {
+    color: #FF7145;
+}
+
+
+/************************* CONTENT ********************************************/
+
+
+/***** Style backlinks for all pages ***********/
+
+.back-link {
+    margin: 5px;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+
+
+/*********************** Sticky Footer  **************************************/
+
+footer.navbar-default.navbar-fixed-bottom {
+    background: black;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+footer.navbar-default.navbar-fixed-bottom p {
+    margin: 0;
+}

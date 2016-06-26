@@ -1,0 +1,127 @@
+/* ADMIN stylesheet*/
+/* Load after public.css*/
+
+
+/***************** FORMS  *************************************************/
+
+input, select, textarea, button {
+    line-height: 1.4;
+    margin: 2px;
+    padding: 3px;
+}
+
+/* Form label*/
+label, .form-buttons{
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.form-buttons  {
+  text-align: center;
+}
+
+/************************* New Button for all new elements in crud +add ....*/
+
+a.new_element {
+    padding: 12px;
+    border: 1px solid grey;
+    text-decoration: none;
+    font-weight: lighter;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+/********************** small action buttons *********************************/
+/*
+.actions {
+    width: 240px;
+}
+.actions a.action {
+    float: left;
+    min-width: 3.5em;
+    padding: 1px 2px;
+    margin: 2px 5px;
+    font-size: 0.7em;
+}*/
+
+
+
+/********************** span helper method for visible true/false *************/
+
+span.status { display: block; width: 10px; height: 10px; border: 1px solid #000000; margin: 0.25em 15px; padding: 0;}
+span.status.true  { background: green; color: green; }
+span.status.false { background: red; color: red; }
+/*.center { text-align: center; }*/
+
+
+
+
+
+/*********************** BOOKS *************************************************/
+
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+/*http://bootsnipp.com/snippets/featured/list-grid-view*/
+
+/*.glyphicon { margin-right:5px; }
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.item.list-group-item
+{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
+{
+    background: #428bca;
+}
+
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+}
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
+}
+.item.list-group-item:nth-of-type(odd)
+{
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img
+{
+    float: left;
+}
+.item.list-group-item:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}*/

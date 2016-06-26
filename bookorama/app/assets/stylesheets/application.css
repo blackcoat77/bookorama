@@ -11,6 +11,8 @@
  * file per style scope.
  *
  *= require normalize-rails
+ *= require public.css
+ *= require admin.css
  *= require_tree .
  *= require_self
  */
