@@ -61,11 +61,10 @@ a.new_element {
 
 /********************** span helper method for visible true/false *************/
 
-span.status { display: block; width: 10px; height: 10px;
-  margin: 0.25em auto; padding: 0; border: 1px solid #000000; }
+span.status { display: block; width: 10px; height: 10px; border: 1px solid #000000; margin: 0.25em 15px; padding: 0;}
 span.status.true  { background: green; color: green; }
 span.status.false { background: red; color: red; }
-.center { text-align: center; }
+/*.center { text-align: center; }*/
 
 /*********************** Sticky Footer  **************************************/
 

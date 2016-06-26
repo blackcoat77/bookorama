@@ -14,6 +14,7 @@
             <th>Image</th>
             <th>Author</th>
             <th>Title</th>
+            <th>Visible</th>
             <th>Book Price</th>
             <th>CRUD</th>
         </tr>
@@ -23,6 +24,7 @@
             <td><%= image_tag(book.photo.url(:thumb)) %></td>
             <td><%= book.author %></td>
             <td><%= book.title %></td>
+            <td><%= status_tag(book.visible) %></td>
             <!-- <td><%= truncate(book.description, :length => 14, :omission => " ... ") %></td> -->
             <td><%= number_to_currency( book.price, :unit => "$")%></td>
             <td class="actions">

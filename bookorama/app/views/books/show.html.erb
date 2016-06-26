@@ -35,6 +35,10 @@
             <td><%= @book.price %></td>
         </tr>
         <tr>
+            <th>Visible</th>
+            <td><%= status_tag(@book.visible) %></td>
+        </tr>
+        <tr>
             <th>Description</th>
             <td><%= @book.description %></td>
         </tr>
