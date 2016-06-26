@@ -4,7 +4,8 @@ class BooksController < ApplicationController
     layout "admin"
 
     def index
-        @books = Book.sorted
+        # @books = Book.sorted
+        @books = Book.page(params[:page]).per(3)
     end
 
     def show
@@ -65,6 +66,6 @@ class BooksController < ApplicationController
     private
 
     def book_params
-        params.require(:book).permit(:category_id, :visible, :isbn, :author, :title, :price, :description, :photo)
+        params.require(:book).permit(:category_id, :visible, :isbn, :author, :title, :price, :description, :creat_at, :photo)
     end
 end

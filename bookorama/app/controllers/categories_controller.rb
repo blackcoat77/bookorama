@@ -2,7 +2,9 @@ class CategoriesController < ApplicationController
 
     layout "admin"
     def index
-        @categories = Category.sorted
+        # @categories = Category.sorted
+        @categories = Category.page(params[:page]).per(2)
+
     end
 
     def show
@@ -12,7 +14,7 @@ class CategoriesController < ApplicationController
 
 
     def new
-        @category = Category.new(category_name: 'Default')
+        @category = Category.new
     end
 
     def create
