@@ -18,7 +18,7 @@
         <tr>
             <td><%= category.id %></td>
             <td><%= category.category_name %></td>
-            <td><%= category.visible %></td>
+            <td class="center"><%= status_tag(category.visible) %></td>
             <td><%= category.books.size %></td>
             <td class="actions">
                 <%= link_to("Edit", {:action => 'edit', :id => category.id}, :class => 'btn btn-warning btn-xs') %>

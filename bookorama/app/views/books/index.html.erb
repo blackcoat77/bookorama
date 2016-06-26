@@ -12,9 +12,8 @@
         <tr>
             <th>Category</th>
             <th>Image</th>
-            <th>ISBN</th>
+            <th>Author</th>
             <th>Title</th>
-            <th>Book Description</th>
             <th>Book Price</th>
             <th>CRUD</th>
         </tr>
@@ -22,9 +21,9 @@
         <tr>
             <td><%= book.category.category_name if book.category %></td>
             <td><%= image_tag(book.photo.url(:thumb)) %></td>
-            <td><%= book.isbn %></td>
+            <td><%= book.author %></td>
             <td><%= book.title %></td>
-            <td><%= truncate(book.description, :length => 14, :omission => " ... ") %></td>
+            <!-- <td><%= truncate(book.description, :length => 14, :omission => " ... ") %></td> -->
             <td><%= number_to_currency( book.price, :unit => "$")%></td>
             <td class="actions">
                 <%= link_to("Show", {:action => 'show', :id => book.id}, :class => 'btn btn-success btn-xs') %>

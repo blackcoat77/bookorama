@@ -16,7 +16,7 @@ body {
     color: #FF7145;
 }
 
-/************************* CONTENT **********************************************/
+/************************* CONTENT ********************************************/
 
 
 /***** Style backlinks for all pages ***********/
@@ -27,7 +27,7 @@ body {
     font-weight: bolder;
 }
 
-/***************** FORM INPUT ***************/
+/***************** FORM INPUT *************************************************/
 
 input, select, textarea, button {
     line-height: 1.4;
@@ -47,7 +47,7 @@ a.new_element {
 }
 
 /********************** small action buttons *********************************/
-
+/*
 .actions {
     width: 240px;
 }
@@ -57,7 +57,15 @@ a.new_element {
     padding: 1px 2px;
     margin: 2px 5px;
     font-size: 0.7em;
-}
+}*/
+
+/********************** span helper method for visible true/false *************/
+
+span.status { display: block; width: 10px; height: 10px;
+  margin: 0.25em auto; padding: 0; border: 1px solid #000000; }
+span.status.true  { background: green; color: green; }
+span.status.false { background: red; color: red; }
+.center { text-align: center; }
 
 /*********************** Sticky Footer  **************************************/
 
