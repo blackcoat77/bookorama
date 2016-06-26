@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
 
+    layout "admin"
     def index
         @categories = Category.sorted
     end

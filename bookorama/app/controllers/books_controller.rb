@@ -1,5 +1,8 @@
 class BooksController < ApplicationController
 
+
+    layout "admin"
+    
     def index
         @books = Book.sorted
     end
