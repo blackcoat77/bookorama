@@ -3,6 +3,8 @@ class BooksController < ApplicationController
 
     layout "admin"
 
+    before_action :confirm_logged_in
+
     def index
         # @books = Book.sorted
         @books = Book.page(params[:page]).per(3)
