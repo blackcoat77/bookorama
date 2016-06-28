@@ -9,3 +9,6 @@
 // });
 //
 // https://www.youtube.com/watch?v=N6BjdJwyKkI&ab_channel=LearnCode
+$(document).ready(function() {
+  $('.popup').magnificPopup({type:'image'});
+});

@@ -13,6 +13,7 @@
  *= require normalize-rails
  *= require public.css
  *= require admin.css
+ *= require magnific-popup
  *= require_tree .
  *= require_self
  */

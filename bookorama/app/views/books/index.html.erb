@@ -21,8 +21,7 @@
         <% @books.each do |book| %>
         <tr>
             <td><%= book.category.category_name if book.category %></td>
-            <td><%=link_to image_tag(book.photo.url(:thumb)), book.photo.url(:original), :popup=>['original', 'height=500,width=700'] %></td>
-
+            <td><%=link_to image_tag(book.photo.url(:thumb)), book.photo.url(:large), :class => "popup" %></td>
             <td><%= book.author %></td>
             <td><%= book.title %></td>
             <td><%= status_tag(book.visible) %></td>
