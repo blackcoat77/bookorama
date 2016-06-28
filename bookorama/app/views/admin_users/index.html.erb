@@ -1,0 +1,38 @@
+<% @page_title = "Admin Users" %>
+
+<h2>Admin Users:</h2>
+<hr>
+<%= link_to(" + Add New User", {:action => 'new'}, :class => 'new_element') %>
+
+<hr/>
+
+<table class="table">
+
+    <table class="table table-striped table-responsive">
+        <tr>
+            <th>Photo</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>email</th>
+            <th>username</th>
+            <th>CRUD</th>
+        </tr>
+             <% @admin_users.each do |admin_user| %>
+        <tr>
+            <td><%= image_tag(admin_user.photo.url(:thumb)) %></td>
+            <td><%= admin_user.first_name %></td>
+            <td><%= admin_user.last_name %></td>
+            <td><%= admin_user.email %></td>
+            <td><%= admin_user.username %></td>
+            <td class="actions">
+                <%= link_to("Edit", {:action => 'edit', :id => admin_user.id}, :class => 'btn btn-warning btn-xs') %>
+                <%= link_to("Delete", {:action => 'delete', :id => admin_user.id}, :class => 'btn btn-danger btn-xs') %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+
+</table>
+
+<!-- Paginate admin_users -->
+<%= paginate @admin_users %>

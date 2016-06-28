@@ -1,12 +1,19 @@
 <% @page_title = "Admin Menu" %>
 
-<div class="menu">
-  <h2>Admin Menu</h2>
-  <div class="identity">Logged in as: <%= session[:username] %></div>
-  <ul>
-    <li><%= link_to("Manage Content", :controller => 'categories') %></li>
-    <li><%= link_to("Manage Books", :controller => 'books') %></li>
-    <li><%= link_to("Manage Admin Users", "#{}") %></li>
-    <li><%= link_to("Logout", :action => 'logout') %></li>
-  </ul>
+
+<div class="row">
+    <div class="menu">
+        <h2>admin control panel</h2>
+        <hr />
+        <h4>Welcome back: <%= session[:username] %></h4>
+        <hr />
+        <p><%= link_to("Manage Categories", {:controller => 'categories'}, :class => "new_element") %></p>
+        <hr />
+        <p><%= link_to("Manage Books", {:controller => 'books'}, :class => "new_element") %></p>
+        <hr />
+        <p><%= link_to("Manage Admin Users", {:controller => 'admin_users'}, :class => "new_element") %></p>
+        <hr />
+        <p><%= link_to("Logout", {:action => 'logout'}, :class => "new_element") %></p>
+        <hr />
+    </div>
 </div>

@@ -2,27 +2,18 @@
 
 <a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
 
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-    	  <div class="modal-dialog">
-				<div class="loginmodal-container">
-					<h1>Login to Your Account</h1><br>
-
-				  <%= form_tag(:action => 'attempt_login') do %>
-
-          <!-- <%= label_tag(:username) %> -->
-          <%= text_field_tag(:username, nil, :placeholder => "Username") %>
-
-          <!-- <%= label_tag(:password) %> -->
-          <%= password_field_tag(:password, nil, :placeholder => "Password") %>
-					<!-- <input type="text" name="user" placeholder="Username">
-					<input type="password" name="pass" placeholder="Password">
-					<input type="submit" name="login" class="login loginmodal-submit" value="Login"> -->
-          <%= submit_tag("Log In", :class => "login loginmodal-submit") %>
-				<% end %>
-
-				  <div class="login-help">
+<div class="modal fade" id="login-modal" tabindex="-1" style="display: none;">
+    <div class="modal-dialog">
+        <div class="loginmodal-container">
+            <h1>Login to Your Account</h1><br>
+            <%= form_tag( {:action => 'attempt_login'}, id: "form-login" ) do %>
+            <%= text_field_tag(:username, nil, :placeholder => "Username") %>
+            <%= password_field_tag(:password, nil, :placeholder => "Password") %>
+            <%= submit_tag("Log In", :class => "login loginmodal-submit") %>
+            <% end %>
+     <!-- <div class="login-help">
 					<a href="#">Register</a> - <a href="#">Forgot Password</a>
-				  </div>
-				</div>
-			</div>
-		  </div>
+				  </div> -->
+        </div>
+    </div>
+</div>

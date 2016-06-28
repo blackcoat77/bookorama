@@ -1,17 +1,17 @@
-<% @page_title = "Add New Book" %>
+<% @page_title = "Add New User" %>
 
 <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
 
-<div class="book new">
-    <h2>Create new Book</h2>
+<div class="admin user new">
+    <h2>Create new user</h2>
 
-    <%= form_for(:book, :url => {:action => 'create'}) do |f| %>
+    <%= form_for(:admin_user, :url => {:action => 'create'}) do |f| %>
 
     <!-- Call partial template _form.html.erb -->
     <%= render(:partial => "form", :locals => {:f => f}) %>
 
     <div class="form-buttons">
-        <%= submit_tag("Create Book") %>
+        <%= submit_tag("Create user") %>
     </div>
 
     <% end %>

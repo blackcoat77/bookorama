@@ -11,16 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160627154955) do
+ActiveRecord::Schema.define(version: 20160627201149) do
 
   create_table "admin_users", force: :cascade do |t|
-    t.string   "first_name",      limit: 25
-    t.string   "last_name",       limit: 50
-    t.string   "email",           limit: 100, default: "", null: false
-    t.string   "username",        limit: 25
+    t.string   "first_name",         limit: 25
+    t.string   "last_name",          limit: 50
+    t.string   "email",              limit: 100, default: "", null: false
+    t.string   "username",           limit: 25
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "password_digest", limit: 255
+    t.string   "password_digest",    limit: 255
+    t.string   "photo_file_name",    limit: 255
+    t.string   "photo_content_type", limit: 255
+    t.integer  "photo_file_size",    limit: 4
+    t.datetime "photo_updated_at"
   end
 
   add_index "admin_users", ["username"], name: "index_admin_users_on_username", using: :btree
