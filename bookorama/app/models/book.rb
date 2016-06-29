@@ -1,6 +1,12 @@
 class Book < ActiveRecord::Base
+
     belongs_to :category
     has_and_belongs_to_many :editors, class_name: 'AdminUser'
+
+    # add friendly_id
+    extend FriendlyId
+    friendly_id :title, use: :slugged
+
 
     has_attached_file :photo,
                       styles: { small: '300x300>', thumb: '100x100#', large: '600x600>' },
@@ -12,6 +18,9 @@ class Book < ActiveRecord::Base
     validates_attachment_content_type :photo, content_type: ['image/jpeg', 'image/png', 'image/jpg']
 
     # TODO other validation fields
+    validates_presence_of :title, :slug
+
+
     # validation of book fields
     validates_presence_of :isbn
     validates_length_of :isbn, maximum: 13

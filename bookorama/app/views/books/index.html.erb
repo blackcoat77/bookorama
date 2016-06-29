@@ -21,16 +21,16 @@
         <% @books.each do |book| %>
         <tr>
             <td><%= book.category.category_name if book.category %></td>
-            <td><%=link_to image_tag(book.photo.url(:thumb)), book.photo.url(:large), :class => "popup" %></td>
+            <td><%= link_to image_tag(book.photo.url(:thumb)), book.photo.url(:large), :class => "popup" %></td>
             <td><%= book.author %></td>
             <td><%= book.title %></td>
             <td><%= status_tag(book.visible) %></td>
             <!-- <td><%= truncate(book.description, :length => 14, :omission => " ... ") %></td> -->
             <td><%= number_to_currency( book.price, :unit => "$")%></td>
             <td class="actions">
-                <%= link_to("Show", {:action => 'show', :id => book.id}, :class => 'btn btn-success btn-xs') %>
-                <%= link_to("Edit", {:action => 'edit', :id => book.id}, :class => 'btn btn-warning btn-xs') %>
-                <%= link_to("Delete", {:action => 'delete', :id => book.id}, :class => 'btn btn-danger btn-xs') %>
+                <%= link_to("Show", {:action => 'show', :id => book.slug}, :class => 'btn btn-success btn-xs') %>
+                <%= link_to("Edit", {:action => 'edit', :id => book.slug}, :class => 'btn btn-warning btn-xs') %>
+                <%= link_to("Delete", {:action => 'delete', :id => book.slug}, :class => 'btn btn-danger btn-xs') %>
             </td>
         </tr>
         <% end %>
@@ -38,5 +38,7 @@
 
 </table>
 
+<div class="center">
 <!-- Paginate books -->
 <%= paginate @books %>
+</div>

@@ -3,7 +3,7 @@
 <div class="book delete">
     <h2>Delete a Book</h2>
 
-    <%= form_for(:book, :url => {:action => 'destroy', :id => @book.id}) do |f| %>
+    <%= form_for(:book, :url => {:action => 'destroy', :id => @book.slug}) do |f| %>
 
     <p>Are you sure you want to permanently delete this book?</p>
 

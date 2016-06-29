@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
     end
 
     def show
-        @category = Category.find(params[:id])
+        @category = Category.friendly.find(params[:id])
     end
 
 
@@ -21,10 +21,10 @@ class CategoriesController < ApplicationController
     end
 
     def create
-        @category = Category.new(category_params)
+        @category = Category.friendly.new(category_params)
         if @category.save
             flash[:notice] = 'Category has been successfully saved..'
-            redirect_to(action: 'show', id: @category.id)
+            redirect_to(action: 'show', id: @category.slug)
         else
             render('new')
         end
@@ -34,14 +34,14 @@ class CategoriesController < ApplicationController
 
 
     def edit
-        @category = Category.find(params[:id])
+        @category = Category.friendly.find(params[:id])
     end
 
     def update
-        @category = Category.find(params[:id])
+        @category = Category.friendly.find(params[:id])
         if @category.update_attributes(category_params)
             flash[:notice] = 'Category updated successfully!'
-            redirect_to(action: 'show', id: @category.id)
+            redirect_to(action: 'show', id: @category.slug)
         elsif
             render('edit')
         end
@@ -51,11 +51,11 @@ class CategoriesController < ApplicationController
 
 
     def delete
-        @category = Category.find(params[:id])
+        @category = Category.friendly.find(params[:id])
     end
 
     def destroy
-        category = Category.find(params[:id])
+        category = Category.friendly.find(params[:id])
         category.destroy
         flash[:notice] = "Category '#{category.category_name}' has been destroyed successfully!"
         redirect_to(action: 'index')
@@ -67,6 +67,6 @@ class CategoriesController < ApplicationController
     private
 
     def category_params
-        params.require(:category).permit(:category_name, :visible)
+        params.require(:category).permit(:category_name, :visible, :slug)
     end
 end

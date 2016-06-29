@@ -5,7 +5,7 @@
 <div class="book new">
     <h2>Create new Book</h2>
 
-    <%= form_for(:book, :url => {:action => 'create'}) do |f| %>
+    <%= form_for(:book, :html => { :multipart => true }, :url => {:action => 'create'}) do |f| %>
 
     <!-- Call partial template _form.html.erb -->
     <%= render(:partial => "form", :locals => {:f => f}) %>

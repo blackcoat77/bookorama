@@ -3,7 +3,7 @@
 <div class="book edit">
     <h2>Edit a Book</h2>
 
-    <%= form_for(:book, html: { multipart: true }, :url => {:action => 'update', :id => @book.id}) do |f| %>
+    <%= form_for(:book, :html => { :multipart => true }, :url => {:action => 'update', :id => @book.slug}) do |f| %>
 
     <!-- Call partial template _form.html.erb -->
     <%= render(:partial => "form", :locals => {:f => f}) %>

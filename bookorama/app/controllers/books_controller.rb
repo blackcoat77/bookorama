@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 
 
-    layout "admin"
+    layout 'admin'
 
     before_action :confirm_logged_in
 
@@ -11,7 +11,7 @@ class BooksController < ApplicationController
     end
 
     def show
-        @book = Book.find(params[:id])
+        @book = Book.friendly.find(params[:id])
     end
 
 
@@ -22,10 +22,10 @@ class BooksController < ApplicationController
     end
 
     def create
-        @book = Book.new(book_params)
+        @book = Book.friendly.new(book_params)
         if @book.save
             flash[:notice] = 'The book was created successfully!'
-            redirect_to(action: 'show', id: @book.id)
+            redirect_to(action: 'show', id: @book.slug)
         else
             render('new')
         end
@@ -35,15 +35,15 @@ class BooksController < ApplicationController
 
 
     def edit
-        @book = Book.find(params[:id])
+        @book = Book.friendly.find(params[:id])
     end
 
     def update
-        @book = Book.find(params[:id])
+        @book = Book.friendly.find(params[:id])
 
         if @book.update_attributes(book_params)
             flash[:notice] = 'The book was updated successfully!.'
-            redirect_to(action: 'show', id: @book.id)
+            redirect_to(action: 'show', id: @book.slug)
         else
             render('edit')
         end
@@ -52,11 +52,11 @@ class BooksController < ApplicationController
 
 
     def delete
-        @book = Book.find(params[:id])
+        @book = Book.friendly.find(params[:id])
     end
 
     def destroy
-        book = Book.find(params[:id])
+        book = Book.friendly.find(params[:id])
         book.destroy
         flash[:notice] = "Book '#{book.title}'destroyed successfully!"
         redirect_to(action: 'index')
@@ -68,6 +68,6 @@ class BooksController < ApplicationController
     private
 
     def book_params
-        params.require(:book).permit(:category_id, :visible, :isbn, :author, :title, :price, :description, :creat_at, :photo)
+        params.require(:book).permit(:category_id, :visible, :isbn, :author, :title, :price, :description, :created_at, :photo, :slug)
     end
 end

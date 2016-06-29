@@ -5,3 +5,11 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
   */
+
+  /***************************** Style pagination *******************************/
+  .pagination > li:first-child > a, .pagination > li:last-child > a  {
+         border-bottom-left-radius: 0px;
+         border-top-left-radius: 0px;
+         border-bottom-right-radius: 0px;
+         border-top-right-radius: 0px;
+  }

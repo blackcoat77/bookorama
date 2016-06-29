@@ -3,7 +3,7 @@
 
   <h2>Update Category</h2>
 
-  <%= form_for( :category, :url => {:action => 'update', :id => @category.id}, :html => {:class => ''}) do |f| %>
+  <%= form_for( :category, :html => { :multipart => true, :class => 'form-cat' }, :url => {:action => 'update', :id => @category.slug}) do |f| %>
 
   <!-- Call partial template _form.html.erb -->
   <%= render(:partial => "form", :locals => {:f => f}) %>

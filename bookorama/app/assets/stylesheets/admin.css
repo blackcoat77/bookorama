@@ -16,6 +16,7 @@ input, select, textarea, button {
     text-align: center
 }
 
+
 /************************* New Button for all new elements in crud +add ....*/
 
 a.new_element {
@@ -150,4 +151,4 @@ span.status.false {
     color: red;
 }
 
-/*.center { text-align: center; }*/
+.center { text-align: center; }

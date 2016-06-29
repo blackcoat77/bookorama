@@ -11,6 +11,8 @@ gem 'normalize-rails'
 
 gem 'paperclip'
 
+gem 'friendly_id', '~> 5.1'
+
 group :development do
   gem "better_errors"
 end

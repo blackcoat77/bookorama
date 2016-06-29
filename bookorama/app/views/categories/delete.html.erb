@@ -3,7 +3,7 @@
 <div class="category delete">
     <h2>Delete a Category</h2>
 
-    <%= form_for(:category, :url => {:action => 'destroy', :id => @category.id}) do |f| %>
+    <%= form_for(:category, :url => {:action => 'destroy', :id => @category.slug}) do |f| %>
 
     <p>Are you sure you want to permanently delete this category?</p>
 
