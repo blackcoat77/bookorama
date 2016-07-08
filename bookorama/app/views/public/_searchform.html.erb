@@ -1,0 +1,9 @@
+<%= search_form_for(@q, :url => {:action => 'search'}, :html => { :class => "navbar-form navbar-right" }) do |f| %>
+<div class="input-group">
+    <%= f.text_field(:title_or_author_or_description_cont, :class => "form-control", :id => "search", :placeholder => "search...")  %>
+    <span class="input-group-btn">
+        <%= f.button(:search, :class => "btn btn-default" ) %>
+    </span>
+</div>
+
+<% end %>

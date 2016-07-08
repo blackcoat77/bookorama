@@ -1,0 +1,28 @@
+<% @page_title = @category.category_name %>
+
+<h2>
+    <%= @category.category_name %></h2>
+
+<hr class="style-nav">
+
+Total of:<%= @books.visible.count %>
+books found
+<div id="Container" class="container-isotop">
+    <div class="row">
+        <% @books.visible.each do |bk| %>
+        <div class="col-md-3 col-xs-6 mix">
+            <div class="thumbnail">
+                <%= link_to image_tag(bk.photo.url(:small)), :controller => 'public', :action => 'show', :slug => bk.slug %>
+                <div class="caption">
+                    <h5><%= link_to_unless_current(bk.title, :controller => 'public', :action => 'show', :slug => bk.slug) %>
+                    </h5>
+                    <p><%= number_to_currency(bk.price) %></p>
+                </div>
+            </div>
+        </div>
+        <% end %>
+    </div>
+
+    <div class="gap"></div>
+    <div class="gap"></div>
+</div>

@@ -1,19 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    padding-bottom: 100px
-}
-
-/*********************** Twitter nav bar ***************************************/
-
-.navbar.navbar-default.navbar-static-top {
-    background-color: black;
-}
-.nav.navbar-nav> li> a {
-    color: #2A82D2;
-}
-.navbar-default .navbar-brand {
-    color: #FF7145;
+    padding-bottom: 10px;
 }
 
 /************************* CONTENT ********************************************/
@@ -25,6 +13,12 @@ body {
     margin: 5px;
     font-style: italic;
     font-weight: bolder;
+}
+
+/********************** Book title/ show product *************************************/
+
+span.book-title {
+    font-size: 26px;
 }
 
 /********************** LOGIN FORM *********************************/
@@ -82,12 +76,8 @@ body {
     font-weight: 700;
     height: 36px;
     padding: 0 8px;
-    /* border-radius: 3px; */
-    /* -webkit-user-select: none;
-  user-select: none; */
 }
 .loginmodal-submit {
-    /* border: 1px solid #3079ed; */
     border: 0px;
     color: #fff;
     text-shadow: 0 1px rgba(0, 0, 0, 0.1);
@@ -95,14 +85,11 @@ body {
     padding: 17px 0px;
     font-family: roboto;
     font-size: 14px;
-    /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
 }
 .loginmodal-submit:hover {
-    /* border: 1px solid #2f5bb7; */
     border: 0px;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
     background-color: #357ae8;
-    /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
 }
 .loginmodal-container a {
     text-decoration: none;
@@ -116,134 +103,130 @@ body {
 .login-help {
     font-size: 12px;
 }
+.miro {
+    background-color: yellow;
+}
 
-/*********************** Sticky Footer  **************************************/
+/* Static side bar**************************************************************/
 
-footer.navbar-default.navbar-fixed-bottom {
-    background: black;
-    color: white;
-    padding: 1em 0;
+
+/*http://www.bootply.com/ePvnTy1VII*/
+
+#navigation {
+    padding: 23px;
+    margin-top: 10px;
+    font-family: fantasy;
+    font-size: 22px;
     text-align: center;
+    margin-left: 5px;
 }
-footer.navbar-default.navbar-fixed-bottom p {
-    margin: 0;
-}body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    padding-bottom: 100px
+#navigation li {
+    list-style-type: none;
 }
-
-/*********************** Twitter nav bar ***************************************/
-
-.navbar.navbar-default.navbar-static-top {
-    background-color: black;
+hr.style-nav {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 }
-.nav.navbar-nav> li> a {
-    color: #2A82D2;
-}
-.navbar-default .navbar-brand {
-    color: #FF7145;
+@media (min-width: 767px) {
+    #navigation {
+        position: fixed;
+    }
 }
 
-/************************* CONTENT ********************************************/
+/* Mix it up *******************************************************************/
 
-
-/***** Style backlinks for all pages ***********/
-
-.back-link {
-    margin: 5px;
-    font-style: italic;
-    font-weight: bolder;
-}
-
-/********************** LOGIN FORM *********************************/
-
-
-/****** LOGIN MODAL ******/
-
-.loginmodal-container {
-    padding: 30px;
-    max-width: 350px;
-    width: 100% !important;
-    background-color: #F7F7F7;
-    margin: 0 auto;
-    border-radius: 2px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    font-family: roboto;
-}
-.loginmodal-container h1 {
-    text-align: center;
-    font-size: 1.8em;
-    font-family: roboto;
-}
-.loginmodal-container input[type=submit] {
-    width: 100%;
-    display: block;
-    margin-bottom: 10px;
-    position: relative;
-}
-.loginmodal-container input#username, input#password {
-    height: 44px;
-    font-size: 16px;
-    width: 100%;
-    margin-bottom: 10px;
-    -webkit-appearance: none;
-    background: #fff;
-    border: 1px solid #d9d9d9;
-    border-top: 1px solid #c0c0c0;
-    /* border-radius: 2px; */
-    padding: 0 8px;
-    box-sizing: border-box;
+* {
+    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-.loginmodal-container input#username:hover, input#password:hover {
-    border: 1px solid #b9b9b9;
-    border-top: 1px solid #a0a0a0;
-    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-.loginmodal {
-    text-align: center;
+p {
+    font-family: "Helvetica Neue", arial, sans-serif;
     font-size: 14px;
-    font-family: 'Arial', sans-serif;
-    font-weight: 700;
-    height: 36px;
-    padding: 0 8px;
-    /* border-radius: 3px; */
-    /* -webkit-user-select: none;
-  user-select: none; */
+    line-height: 1.4;
+    margin-bottom: 1em;
 }
-.loginmodal-submit {
-    /* border: 1px solid #3079ed; */
-    border: 0px;
-    color: #fff;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
-    background-color: #4d90fe;
-    padding: 17px 0px;
-    font-family: roboto;
-    font-size: 14px;
-    /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+p:last-child {
+    margin-bottom: 0;
 }
-.loginmodal-submit:hover {
-    /* border: 1px solid #2f5bb7; */
-    border: 0px;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-    background-color: #357ae8;
-    /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+.container-isotop {
+    padding: 2% 2% 0;
+    /*text-align: justify;*/
+    font-size: 0;
+    /*background: #68b8c4;*/
 }
-.loginmodal-container a {
-    text-decoration: none;
-    color: #666;
-    font-weight: 400;
-    text-align: center;
+.container-isotop:after {
+    content: '';
     display: inline-block;
-    opacity: 0.6;
-    transition: opacity ease 0.5s;
+    width: 100%;
 }
-.login-help {
-    font-size: 12px;
+.container-isotop .item, .container-isotop .gap {
+    display: inline-block;
+    width: 49%;
+}
+.container-isotop .item {
+    text-align: left;
+    background: #03899c;
+    margin-bottom: 2%;
+    padding: 2%;
+    vertical-align: top;
+    /*display: none; <-- uncomment this rule for use with MixItUp*/
+    display: none;
+}
+
+/* Flex box progressive enhancements: */
+
+.container-isotop {
+    /*display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+    -webkit-justify-content: space-between;
+  -webkit-align-content: flex-start;*/
+}
+@media all and (min-width: 420px) {
+    .container-isotop .item, .container-isotop .gap {
+        width: 32%;
+    }
+}
+@media only screen and (min-width: 750px) {
+    .container-isotop {
+        width: 95%;
+    }
+    .container-isotop .item, .container-isotop .gap {
+        width: 32%;
+    }
+}
+
+/* MAKING CONTAINER RESPONSIVE  *****************/
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container:before, .container:after {
+    content: " ";
+    display: table;
+}
+.container:after {
+    clear: both;
+}
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container-fluid:before, .container-fluid:after {
+    content: " ";
+    display: table;
+}
+.container-fluid:after {
+    clear: both;
 }
 
 /*********************** Sticky Footer  **************************************/

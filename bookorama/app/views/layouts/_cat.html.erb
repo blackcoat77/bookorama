@@ -1,0 +1,23 @@
+<% categories ||= [] %>
+
+
+<% categories.each do |category| %>
+  <div id="Container" class="container-isotop">
+      <div class="row">
+            <% category.books.visible.each do |bk| %>
+          <div class="col-md-3 col-xs-6 mix">
+             <div class="thumbnail" >
+               <!-- <%= link_to image_tag(bk.photo.url(:small)), bk.photo.url(:preview), :class => "img-responsive popup" %> -->
+               <%= link_to image_tag(bk.photo.url(:small)), :controller => 'public', :action => 'show', :slug => bk.slug %>
+               <div class="caption">
+                  <h5><%= link_to_unless_current(bk.title, :controller => 'public', :action => 'show', :slug => bk.slug) %> </h5>
+                  <p><%= number_to_currency(bk.price) %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="gap"></div>
+      <div class="gap"></div>
+  </div>
+<% end %>

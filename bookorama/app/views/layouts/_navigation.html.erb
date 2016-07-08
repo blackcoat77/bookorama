@@ -1,0 +1,16 @@
+<% categories ||= [] %>
+<ul>
+  <% categories.each do |category| %>
+    <li>
+      <%= link_to_unless_current(category.category_name, :action => 'cat', :slug => category.slug) %>
+      <hr class="style-nav"/>
+      <!-- <ul> -->
+        <!-- <% category.books.visible.each do |book| %> -->
+        <!-- <li> -->
+          <!-- <%= link_to_unless_current(book.title, :action => 'show', :slug => book.slug) %> -->
+        <!-- </li> -->
+  <!-- <% end %> -->
+      <!-- </ul> -->
+    </li>
+  <% end %>
+</ul>

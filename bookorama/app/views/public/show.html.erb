@@ -1,0 +1,108 @@
+<% @page_title = @book.title %>
+
+<h1>
+    <span class="book-title">
+        <%= @book.title %>:
+        <%= @book.author%></span>
+</h1>
+<p></p>
+
+<hr/>
+<br>
+
+<div class="row">
+    <div class="col-md-7">
+
+        <div class="img-responsive">
+            <%= link_to image_tag(@book.photo.url(:preview)), @book.photo.url(:large), :class => "img-responsive popup" %>
+        </div>
+
+        <!-- <ul class="thumbnails">
+
+            <div class="row">
+                <div class="col-xs-3">
+                    <a href="">first thumbnail</a>
+                </div>
+
+                <div class="col-xs-3">
+                    <a href="#">second thumbnail</a>
+                </div>
+
+                <div class="col-xs-3"></div>
+
+                <div class="col-xs-3"></div>
+            </div>
+
+        </ul> -->
+
+    </div>
+
+    <div class="col-md-5">
+        <h2><%= @book.title %></h2>
+        <p>
+            <font size="6px"><%= number_to_currency(@book.price) %></font>
+        </p>
+
+        <p>ISBN:
+            <%= @book.isbn %></p>
+        <p>Author:
+            <%= @book.author %></p>
+
+        <p>Book Description:
+        </p>
+        <p><%= @book.description %></p>
+
+        <p></p>
+
+        <p></p>
+
+        <div class="size12">
+            <p>Shipping: Ships in 1-2 business days.
+                <br>
+                <strong>US Shipping is FREE. Easy Returns.
+                </strong>
+                <a href="#shipreturns" role="link" data-toggle="modal">Learn more.</a>
+            </p>
+        </div>
+
+        <div class="modal fade" id="shipreturns">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">×</button>
+
+                        <h4 class="modal-title">Shipping and Returns.</h4>
+                    </div>
+                    <!-- end modal-header -->
+                    <div class="modal-body">
+                        <p>
+                            <b>FREE Shipping:
+                            </b>All items on Bookorama ship free within the US. Delivery in 4-7 business days.</p>
+
+                        <p>
+                            <b>No-Hassle Returns:
+                            </b>Please email us at
+                            <u>bookorama@example.com</u>
+                            within 30 days of the order being placed. Here's more information on our
+                            <a href="#">easy returns process.</a>
+                        </p>
+
+                    </div>
+                    <!-- end modal-body -->
+                </div>
+                <!-- end modal-content -->
+            </div>
+            <!-- end modal-dialog -->
+        </div>
+        <!-- end shipreturns -->
+
+        <br>
+
+        <a class="btn btn-primary btn-xl" data-no-turbolink="true" href="#">BUY
+            <span class="glyphicon"></span>
+        </a>
+
+        <br><br>
+
+    </div>
+</div>

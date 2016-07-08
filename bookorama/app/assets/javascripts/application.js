@@ -14,4 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require magnific-popup
+//= require mixitup
+//= require headroom.js
+//= require jQuery.headroom.js
 //= require_tree .
